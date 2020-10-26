@@ -4,6 +4,7 @@ import sys
 import requests
 
 def print_article (keyword):
+    """retrieve keyword from belgian articles"""
     osm ="http://newsapi.org/v2/top-headlines?country=be&apiKey=f81764364b4848b4972eb8a87aae1f36"
     data = {'q': keyword, 'format': 'json'}
     resp = requests.get(osm, data)
