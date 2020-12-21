@@ -13,7 +13,6 @@ sw += ["les", "plus", "cette", "fait", "faire", "être", "deux", "comme", "dont"
        "ils", "bien", "sans", "peut", "tous", "après", "ainsi", "donc", "cet", "sous",
        "celle", "entre", "encore", "toutes", "pendant", "moins", "dire", "cela", "non",
        "faut", "trois", "aussi", "dit", "avoir", "doit", "contre", "depuis", "autres",
-<<<<<<< HEAD
        "van", "het", "autre", "jusqu", "elles", "assez", "ceux", "quelque", "parce", "que", 
        "aucun", "très", "rien", "peu", "laquelle", "etc", "chaque", "chez", "leurs", "aucune",
        "imp", "certain", "mal", "effet", "terme", "également", "crois", "quelques", "diverses", "déjà", "plusieurs",
@@ -23,25 +22,10 @@ sw = set(sw)
 
 
 def filtering(YEAR):
-    path = f"{YEAR}.txt"
+    path = "instruction.txt"
     output = open(f"{YEAR}_keywords.txt", "w")
 
     with open(path) as f:
-=======
-       "van", "het", "autre", "jusqu", "ville"]
-sw = set(sw)
-
-
-def filtering(year, folder=None):
-    if folder is None:
-        input_path = f"{year}.txt"
-        output_path = f"{year}_keywords.txt"
-    else:
-        input_path = f"{folder}/{year}.txt"
-        output_path = f"{folder}/{year}_keywords.txt"
-    output = open(output_path, "w", encoding='utf-8')
-    with open(input_path, encoding='utf-8') as f:
->>>>>>> upstream/master
         text = f.read()
         words = nltk.wordpunct_tokenize(text)
         kept = [w.lower() for w in words if len(
